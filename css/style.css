@@ -53,7 +53,8 @@ supplement Bootstrap 4 and w3 styles */
 }
 
 .linkedIn {
-    text-align: center;
+    text-align: left;
+    font-size: 12px;
     font-family: 'Avenir Next Ultra Light','Helvetica Neue Ultra Light', Arial, Helvetica, sans-serif;
     color: grey;
     text-underline-position: below;
