@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WORKMapper | Create a WO from the Map</title>
+  <meta charset="utf-8">
+  <meta name ="description" content="Create Maximo work orders from a map.">
+  <meta name="keywords" content="work, workmapper, map, order, maximo, app, web">
+  <meta name="author" content="Todd Burciaga">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/w3/css/w3.css">
+  <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+  <link rel="stylesheet" href="lib/leaflet-fullscreen/leaflet.fullscreen.css">
+  <link rel="stylesheet" href="lib/leaflet-locate/L.Control.Locate.min.css">
+  <link rel="stylesheet" href="lib/font-awesome/font-awesome.min.css">
+  <link rel="stylesheet" href="lib/leaflet-legend/leaflet.legend.css">
+  <link rel="stylesheet" href="lib/leaflet-measure/leaflet-measure.css">
+  <link rel="stylesheet" href="lib/esri-leaflet-geocoder/esri-leaflet-geocoder.css">
+  <link rel="stylesheet" href="lib/arcgis-api-for-js/main.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- <script src="lib/jquery/js/jquery-3.4.1.min.js"></script> -->
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/leaflet/leaflet-src.js"></script>
+  <script src="lib/leaflet/leaflet.js"></script>
+  <script src="lib/leaflet-fullscreen/Leaflet.fullscreen.min.js"></script>
+  <script src="lib/leaflet-locate/L.Control.Locate.min.js"></script>
+  <script src="lib/leaflet-legend/leaflet.legend.js"></script>
+  <script src="lib/leaflet-measure/leaflet-measure.js"></script>
+  <script src="lib/leaflet-editable/src/Leaflet.Editable.js"></script>
+  <script src="lib/leaflet-path-drag/src/Path.Drag.js"></script>
+  <script src="lib/esri-leaflet/esri-leaflet.js"></script>
+  <script src="lib/esri-leaflet/esri-leaflet-vector.js"></script>
+  <script src="lib/esri-leaflet-renderers/esri-leaflet-renderers.js"></script>
+  <script src="lib/esri-leaflet-geocoder/esri-leaflet-geocoder-debug.js"></script>
+  <script src="lib/arcgis-api-for-js/init.js"></script>
+</head>
+
+<body>
+
+<!-- !NAVBAR STYLING! -->
+<nav class="navbar navbar-expand-sm bg-white navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">about</a>
+            </li>  
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" id="active">map</a>  
+            </li>  
+          </ul>
+        </div>
+        <div class="toplogo">
+          <a href="index.html"><img src="img/Logo2.png" width="230px"></a>
+        </div>  
+</nav>
+
+<!-- !PAGE CONTENT! -->
+<div id="map"></div>
+
+<!-- End Page Content -->
+
+</body>
+
+    <!-- !PAGE FOOTER! -->
+    <div class="card-footer text-center" style="margin-top:0">
+      <p>© Todd Burciaga</p>
+    </div>
+
+<!-- !JAVASCRIPT! -->
+<script src="js/main.js"></script>
+
+</html>
