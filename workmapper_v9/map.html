@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WORKMapper | Map the Work!</title>
+        <meta charset="utf-8">
+        <meta name ="description" content="Create work orders from a map.">
+        <meta name="keywords" content="work, workmapper, map, order, app, web">
+        <meta name="author" content="Todd Burciaga">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <!-- GENERAL STYLESHEETS -->
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/bootstrap-table/bootstrap-table.min.css">
+        <link rel="stylesheet" href="lib/bootstrap-datepicker/css/bootstrap-datepicker3.css">
+        <link rel="stylesheet" href="lib/w3/w3.css">
+        
+        <!-- LEAFLET TOOL STYLESHEETS -->
+        <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+        <link rel="stylesheet" href="lib/leaflet-groupedlayercontrol/leaflet.groupedlayercontrol.css">
+        <link rel="stylesheet" href="lib/leaflet-sidebar/L.Control.Sidebar.css">
+        <link rel="stylesheet" href="lib/leaflet-fullscreen/leaflet.fullscreen.css">
+        <link rel="stylesheet" href="lib/leaflet-locate/L.Control.Locate.min.css">
+        <link rel="stylesheet" href="lib/font-awesome/font-awesome.min.css">
+        <link rel="stylesheet" href="lib/leaflet-legend/leaflet.legend.css">
+        <link rel="stylesheet" href="lib/leaflet-measure/leaflet-measure.css">
+        <link rel="stylesheet" href="lib/esri-leaflet-geocoder/esri-leaflet-geocoder.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- LEAFLET JAVASCRIPT PLUGINS -->
+        <script src="lib/jquery/jquery-3.4.1.min.js"></script>
+        <script src="lib/popper/popper.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="lib/bootstrap-table/bootstrap-table.min.js"></script>
+        <script src="lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="lib/leaflet/leaflet.js"></script>
+        <script src="lib/leaflet-fullscreen/Leaflet.fullscreen.min.js"></script>
+        <script src="lib/leaflet-locate/L.Control.Locate.min.js"></script>
+        <script src="lib/leaflet-legend/leaflet.legend.js"></script>
+        <script src="lib/leaflet-measure/leaflet-measure.js"></script>
+        <script src="lib/leaflet-sidebar/L.Control.Sidebar.js"></script>
+
+        <!-- ESRI LEAFLET JAVASCRIPT PLUGINS -->
+        <script src="lib/esri-leaflet/esri-leaflet.js"></script>
+        <script src="lib/esri-leaflet-vector/esri-leaflet-vector.js"></script>
+        <script src="lib/esri-leaflet-renderers/esri-leaflet-renderers-debug.js"></script>
+        <script src="lib/esri-leaflet-geocoder/esri-leaflet-geocoder-debug.js"></script>
+        <script src="lib/esri-leaflet-related/esri-leaflet-related.js"></script>
+
+    </head>
+
+    <body>
+        <!-- !NAVBAR STYLING! -->
+        <nav class="navbar navbar-expand-sm bg-white navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="map.html" id="active">map</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">about</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a class="nav-link" href="help.html">help</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="toplogo">
+                <a href="index.html"><img src="img/Logo.png" width="230px"></a>
+            </div>  
+        </nav>
+
+        <!-- !PAGE CONTENT! -->
+            
+            <!-- SIDEBAR -->
+            <div id="sidebar">
+                <h1>leaflet-sidebar</h1>
+            </div>
+
+            
+            <!-- MAP -->
+            <div id="map"></div>
+            
+        <!-- End Page Content -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+            
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-title" style="text-align:center;"><img width="250px" src="img/logo.PNG"></div>
+                        </div>
+                        <div class="modal-body">
+                            <p>Welcome to WORKMapper! The assets shown on the mapping application you are about to use represent utilty infrastructure. You can tell which assets have work orders associated with them through the purple outlines showing underneath an asset. These outlines will appear and disappear automatically as work orders are opened and closed.
+                            <p>To view more information about an asset, click or tap on one in the map. A sidebar will appear and the assets's attributes will be displayed in a menu.
+                            <p>From the sidebar, you can also create new work orders. Simply click the Create Work Order button at the bottom of the menu. Or you can click "close" to return to the map.
+                            <p><strong>Click or tap off to the side of this dialog box to begin. Happy (work) mapping!</strong></p>
+                            <small><i>Application Created by Todd Burciaga for GEOG 778 at UW-Madison</i></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+            
+            <script>
+                $(document).ready(function () {
+                    // Show the Modal on load
+                    $("#myModal").modal("show");
+
+                    // Hide the Modal
+                    $("#myBtn").click(function () {
+                        $("#myModal").modal("hide");
+                    });
+                });
+            </script>
+
+    </body>
+
+    <!-- !PAGE FOOTER! -->
+    <div class="card-footer text-center" style="margin-top:0">
+        <p>© Todd Burciaga</p>
+    </div>
+
+    <!-- !JAVASCRIPT! -->
+    <!-- <script src="lib/leaflet-groupedlayercontrol/leaflet.groupedlayercontrol.js"></script> -->
+    <script src="js/main.js"></script>
+
+</html>
